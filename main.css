@@ -1,0 +1,1923 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.top-banner {
+    color: #ddd;
+    font-size: 30px;
+    background-color: #0b5026;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-banner p {
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.logo {
+    text-align: center;
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+
+.logo img {
+    margin-top: 10px;
+    max-width: 150px;
+}
+
+.navbar {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+.nav-items {
+    padding-left: 160px;
+    display: flex;
+    list-style: none;
+}
+
+.nav-items li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.nav-items .dropdown-content {
+    width:250%;
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    top: 100%; /* Ensures the dropdown appears below the menu item */
+    left: 0;
+}
+
+/* Make the dropdown visible on hover */
+.nav-items li:hover .dropdown-content,
+.nav-items li:focus-within .dropdown-content {
+    display: block;
+}
+
+.nav-items .dropdown-content a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+}
+
+.nav-items .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown-active .dropdown-content {
+    display: block;
+}
+
+
+/* Ensuring proper behavior for touch devices */
+.nav-items li a:focus + .dropdown-content {
+    display: block;
+}
+
+.nav-items li:hover {
+    text-decoration:underline;
+}
+
+.search-cart-account input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.search-cart-account{
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.search-cart-account a{
+    margin: 10px;
+}
+
+.main-banner video {
+    height: 600px;
+    width: 100%;
+    /* height: auto; */
+    display: block;
+    /* object-fit: cover;  */
+    background-color: #b4f0b6;
+}
+
+ 
+.categories, .best-sellers, .beautiful-veg-plants, .new-launches, .Miniatures, .Prickly,  .blog-posts, .care-tips, .difference {
+    padding: 20px;
+    text-align: center;
+   
+}
+
+.new-launches{
+ margin-top: 20px;
+}
+
+.category-grid,.difference-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.product-grid{
+    justify-content: center;
+    display: flex;
+    gap: 55px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.product-item img{
+    max-width: 295px;
+    border-radius: 10%;
+ }
+
+ .product-item{
+    font-size: 14px;
+    flex: 1 1 calc(25% - 20px);
+    max-width: 295px;
+}
+
+.product-item a{
+    color: black;
+    text-decoration: none;
+}
+
+.product-item p{
+    margin: 10px;
+}
+
+.product-item a:hover{
+    text-decoration: underline;
+}
+
+.category-item{
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(13% - 10px);
+}
+
+
+.category-item img{
+    max-width: 75%;
+    border-radius: 50%;
+}
+ 
+.product-item:hover img {
+    opacity: 0.8;
+}
+
+.category-item p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.category-item a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.category-item a:hover{
+    text-decoration: underline;
+}
+
+button {
+    background-color: green;
+    color: white;
+    width: 60%;
+    height: 7%;
+    border-radius: 7px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.view-all-new{
+    margin-left: 45%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: rgb(235, 182, 25);
+    height: 45px;
+    width: 10%;
+    border-radius: 7px;
+    color: black;
+    border: transparent;
+}
+
+.view-all-new a{
+    text-decoration: none;
+    padding-top: 14px;
+    color: black;
+}
+
+.blog-posts, .new-launches, .Miniatures{
+    background-color: orange;
+}
+
+.blog-grid{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.blog-item{
+    background-color: #b4f0b6;
+    flex: 1 1 calc(25% - 20px);
+    max-width: 17%;
+    border-radius: 10px;
+    max-height: 300%;
+    padding-bottom: 10px;
+}
+
+.blog-item img{
+    max-width: 100%;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    
+}
+
+
+.blog-item a {
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-item a:hover{
+    text-decoration: underline;
+}
+
+.date{
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.detail{
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(104, 104, 104);
+}
+
+.detail p{
+    max-height: 100%;
+}
+
+.care-tips{
+    background-color: #ddcc9d;
+    border-radius: 15px;
+    margin-top: 20px;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(90% - 20px);
+    margin-left: 6%;
+}
+
+.care-image, .care-tips{
+    display: flex;
+    text-align:start;
+}
+
+.care-text{
+    margin-top: 5px;
+    margin-left: 7%;
+}
+
+.care-image img{
+    border-radius: 5px;
+    max-height: 100%;
+    max-width: calc(150% - 5px);
+}
+
+.difference{
+    background-color: rgb(33, 79, 56);
+    margin-top: 20px;
+    color: white;
+}
+
+.difference-item img {
+    border-radius: 15px;
+}
+
+.image-container1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container1 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('laxmi2.jpg'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container1:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container1:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container2 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('stringop.png'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container2:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container2:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container3 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container3 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container3:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('jade2.png'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container3:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container3:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container4 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container4:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('OTHONA2.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container4:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container4:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container5 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container5 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container5:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('PEACOCKI.jpg'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container5:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container5:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container6 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container6:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('6.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container6:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container6:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container7 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container7 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container7:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('7.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container7:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container7:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container8 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container8 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container8:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('8.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container8:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container8:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container9 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container9 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container9:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('9.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container9:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container9:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container10 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container10 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container10:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('10.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container10:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container10:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container11 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container11 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container11:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('11.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container11:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container11:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container12 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container12 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('12.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container12:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container12:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container13 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container13 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container13:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('13.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container13:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container13:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container14 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container14 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container14:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('14.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container14:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container14:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container15 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container15 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container15:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('15.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container15:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container15:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container16 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container16 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container16:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('16.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container16:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container16:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container17 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container17 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container17:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('17.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container17:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container17:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container18 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container18 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container18:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('18.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container18:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container18:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container19 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container19 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container19:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('19.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container19:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container19:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container20 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container20 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container20:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('20.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container20:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container20:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+.image-container21 {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container21 img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container21:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('21.webp'); /* The image to show on hover */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.image-container21:hover img {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.image-container21:hover:after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+    .image-container22 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container22 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container22:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('22.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container22:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container22:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container23 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container23 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container23:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('23.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container23:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container23:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container24 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container24 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container24:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('24.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container24:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container24:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container25 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container25 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container25:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('26.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container25:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container25:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container26 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container26 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container26:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('25.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container26:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container26:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container27 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container27 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container27:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('27.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container27:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container27:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container28 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container28 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container28:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('28.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container28:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container28:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container29 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container29 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container29:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('29.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container29:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container29:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container30 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container30 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container30:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('30.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container30:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container30:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container31 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container31 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container31:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('31.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container31:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container31:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    
+    .image-container32 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container32 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container32:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('32.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container32:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container32:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container33 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container33 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container33:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('33.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container33:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container33:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container34 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container34 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container34:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('34.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container34:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container34:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container35 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container35 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container35:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('35.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container35:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container35:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    .image-container36 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container36 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container36:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('36.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container36:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container36:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+
+    .image-container37 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container37 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container37:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('37.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container37:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container37:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    
+    .image-container38 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container38 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container38:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('38.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container38:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container38:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    
+    .image-container39 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container39 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container39:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('39.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container39:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container39:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+
+    .image-container40 {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .image-container40 img {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .image-container40:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('40.webp'); /* The image to show on hover */
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .image-container40:hover img {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    
+    .image-container40:hover:after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+/* 
+.view-all {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+} */
+
+footer {
+    background-color: rgba(248, 220, 170, 0.72);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-columns {
+    margin-left: 4%;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.footer-column{
+    margin-left: 6%;
+    max-width: 400px;
+    line-height:28.8px;
+    vertical-align:baseline;
+    letter-spacing:0.6px;
+    word-spacing:0px;
+    font-weight:400;
+    font-style:normal;
+    font-variant:normal;
+    text-transform:none;
+    text-decoration:none solid rgba(46, 42, 57, 0.75);
+    text-align:start;
+    text-indent:0px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-column a:hover{
+    text-decoration: underline;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.reviews-button {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: #ff5722;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    text-align: center;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 45px;
+    height:150px;
+}
+
+.reviews-button a {
+    margin-top: 110px;
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    transform: rotate(-90deg); /* Rotate the text vertically */
+    transform-origin: left center; /* Adjust origin for better positioning */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    font-size: 18px; /* Adjust font size as per your design */
+}
+
+
+
+
+@media (max-width: 768px) {
+    .navbar, .category-grid, .product-grid, .blog-grid, .difference-grid, .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item, .product-item, .blog-item, .difference-item {
+        max-width: 100%;
+    }
+}
