@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.top-banner {
+    color: #ddd;
+    font-size: 30px;
+    background-color: #0b5026;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-banner p {
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.logo {
+    text-align: center;
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+
+.logo img {
+    margin-top: 10px;
+    max-width: 150px;
+}
+
+.navbar {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+.nav-items {
+    padding-left: 160px;
+    display: flex;
+    list-style: none;
+}
+
+.nav-items li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.nav-items .dropdown-content {
+    width:250%;
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    top: 100%; /* Ensures the dropdown appears below the menu item */
+    left: 0;
+}
+
+/* Make the dropdown visible on hover */
+.nav-items li:hover .dropdown-content,
+.nav-items li:focus-within .dropdown-content {
+    display: block;
+}
+
+.nav-items .dropdown-content a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+}
+
+.nav-items .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.dropdown-active .dropdown-content {
+    display: block;
+}
+
+
+/* Ensuring proper behavior for touch devices */
+.nav-items li a:focus + .dropdown-content {
+    display: block;
+}
+
+.nav-items li:hover {
+    text-decoration:underline;
+}
+
+.search-cart-account input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.search-cart-account{
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.search-cart-account a{
+    margin: 10px;
+}
+
+.main-banner video {
+    height: 600px;
+    width: 100%;
+    /* height: auto; */
+    display: block;
+    /* object-fit: cover;  */
+    background-color: #b4f0b6;
+}
+
+@media (max-width: 768px) {
+    .navbar, .category-grid, .product-grid, .blog-grid, .difference-grid, .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item, .product-item, .blog-item, .difference-item {
+        max-width: 100%;
+    }
+}
